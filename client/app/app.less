@@ -1,0 +1,88 @@
+@import 'bootstrap/less/bootstrap.less';
+@import 'font-awesome/less/font-awesome.less';
+
+@icon-font-path: '/bower_components/bootstrap/fonts/';
+@fa-font-path: '/bower_components/font-awesome/fonts';
+
+/**
+ * App-wide Styles
+ */
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@border-radius-base: 2px;
+@container-lg: 1090px;
+
+.navbar-google {
+  height: 60px;
+  background-color: #F1F1F1;
+
+  .navbar-brand {
+    line-height: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #navbar-main {
+    padding: 15px;
+  }
+
+  .search-container {
+    max-width: 700px;
+    position: relative;
+
+    input {
+      border-radius: 0;
+      border-right: none;
+    }
+
+    .btn-search {
+      background: linear-gradient(#4d90fe, #4787ed);
+      color: #fff;
+      width: 60px;
+    }
+
+    .microphone {
+      position: absolute;
+      right: 70px;
+      font-size: 1.3em;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      z-index: 2;
+      background: none;
+      border: none;
+      color: #8C8C8C;
+      line-height: 33px;
+      padding: 0;
+    }
+  }
+}
+
+footer {
+  background-color: #F1F1F1;
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      float: left;
+      margin-right: 40px;
+
+      > a {
+        color: @gray-light;
+      }
+    }
+  }
+}
+
+// injector
+@import 'main/main.less';
+@import 'modal/modal.less';
+// endinjector
