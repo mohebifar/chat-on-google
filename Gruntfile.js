@@ -223,7 +223,7 @@ module.exports = function (grunt) {
       target: {
         src: '<%= yeoman.client %>/index.html',
         ignorePath: '<%= yeoman.client %>/',
-        exclude: [/bootstrap-sass-official/, /bootstrap.js/, '/json3/', '/es5-shim/', /bootstrap.css/, /font-awesome.css/ ]
+        exclude: [/bootstrap-sass-official/, /bootstrap.js/, '/jquery/', '/json3/', '/es5-shim/', /bootstrap.css/, /font-awesome.css/ ]
       }
     },
 
@@ -568,7 +568,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:less', 
+        'injector:less',
         'concurrent:server',
         'injector',
         'wiredep',
@@ -580,7 +580,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'env:all',
-      'injector:less', 
+      'injector:less',
       'concurrent:server',
       'injector',
       'wiredep',
@@ -610,7 +610,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:less', 
+        'injector:less',
         'concurrent:test',
         'injector',
         'autoprefixer',
@@ -623,7 +623,7 @@ module.exports = function (grunt) {
         'clean:server',
         'env:all',
         'env:test',
-        'injector:less', 
+        'injector:less',
         'concurrent:test',
         'injector',
         'wiredep',
@@ -641,7 +641,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'injector:less', 
+    'injector:less',
     'concurrent:dist',
     'injector',
     'wiredep',

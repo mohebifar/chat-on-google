@@ -1,17 +1,28 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <div class="container main-container">
-  Salaam :D
-  <!--
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
-      </span>
-    </p>
-  </form>-->
+  <p class="stats">
+    About 738,000 results (0.39 seconds)
+  </p>
+  <ul class="search-result">
+    <li>
+      <h3>
+        <a href="#" ngf-select ng-model="files" ngf-change="addFile($files)">Images for the result</a>
+      </h3>
+      <div>
+        <a href="static/{{ image.file }}" target="_blank" ng-repeat="image in awesomeFiles"><i class="glyphicon glyphicon-bullhorn"></i> </a>
+      </div>
+    </li>
+    <li ng-repeat="thing in awesomeThings">
+      <button type="button" class="close" ng-click="deleteThing(thing)">&times;</button>
+      <h3><a href="#">{{thing.info}}</a></h3>
+
+      <div class="info">chemistry.stackexchange.com/.../what-is-it-to-do-with-it</div>
+      <div class="content">
+        {{thing.info}}
+      </div>
+    </li>
+  </ul>
 </div>
 
 <footer class="footer">

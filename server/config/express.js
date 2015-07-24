@@ -26,7 +26,7 @@ module.exports = function(app) {
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(cookieParser());
-  
+
   if ('production' === env) {
     app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'public')));
@@ -38,6 +38,7 @@ module.exports = function(app) {
     app.use(require('connect-livereload')());
     app.use(express.static(path.join(config.root, '.tmp')));
     app.use(express.static(path.join(config.root, 'client')));
+    app.use('/static', express.static(path.join(config.root, 'static')));
     app.set('appPath', 'client');
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last

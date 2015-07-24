@@ -41,6 +41,8 @@ var all = {
     }
   },
 
+  "static":  path.normalize(__dirname + '/../../../static')
+
 };
 
 // Export the config object based on the NODE_ENV
